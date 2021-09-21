@@ -1,0 +1,1 @@
+for device in $(bluetoothctl devices | grep -vEi '(o que mais vc quer deixar aqui|samsung|jbl|wireless)' | awk '{print $2}'); do bluetoothctl remove $device; done
